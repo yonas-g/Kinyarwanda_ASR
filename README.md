@@ -5,6 +5,7 @@
 - Convert the mp3 files to wav with sample rate of 16000
 - Prepare JSON manifest file for NeMo training
   - clean the characters
+- remove audio files with word rate greater than 3
   
 ## Multilinguage Data Creation
 Please refere to [this link](https://github.com/NVIDIA/NeMo/blob/main/scripts/speech_recognition/code_switching/code_switching_audio_data_creation.py)

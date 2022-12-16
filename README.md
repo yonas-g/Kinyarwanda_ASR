@@ -12,7 +12,7 @@ Please refere to [this link](https://github.com/NVIDIA/NeMo/blob/main/scripts/sp
 
 ## Tokenization
 NeMo provides a code to get the tokens as follows
-```
+```shell
 python ${NEMO_ROOT}/scripts/tokenizers/process_asr_text_tokenizer.py \
   --manifest=dev_decoded_processed.json,train_decoded_processed.json \
   --vocab_size=1024 \
@@ -29,7 +29,7 @@ To make the training faster, we can tar the dataset. This creates a new data whe
 
 ## Training
 One the preprocessing and tokenization is done, we can train our model as follows.
-```
+```shell
 TOKENIZER=tokenizers/tokenizer_spe_bpe_v1024_max_4/
 TRAIN_MANIFEST=data/train_tarred_1bk/tarred_audio_manifest.json
 TRAIN_FILEPATHS=data/train_tarred_1bk/audio__OP_0..1023_CL_.tar
@@ -53,7 +53,7 @@ model.test_ds.manifest_filepath=$TEST_MANIFEST
 
 ### Finetuning pretrained model
 To finetune the available model, you've to add the following code snipper to your configuration yaml file.
-```
+```shell
 init_from_pretrained_model:
   model0:
     name: "stt_rw_conformer_ctc_large"

@@ -59,6 +59,7 @@ init_from_pretrained_model:
     name: "stt_rw_conformer_ctc_large"
     exclude: ["decoder"]
 ```
+Here excluding the decoder allows you the flexibility to experiment with different tokenizers and sub-token values. If you don't want to change the sub-token values, you can set it to 128 and train without excluding the decoder.
 
 
 ## Reference

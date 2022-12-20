@@ -29,7 +29,7 @@ python ${NEMO_ROOT}/scripts/tokenizers/process_asr_text_tokenizer.py \
 To make the training faster, we can tar the dataset. This creates a new data where the sample are concatenated. Please refer to the link attached below for more information on how to tar your dataset
 
 ## Training
-One the preprocessing and tokenization is done, we can train our model as follows.
+One the preprocessing and tokenization is done, we can train our model as follows
 ```shell
 TOKENIZER=tokenizers/tokenizer_spe_bpe_v1024_max_4/
 TRAIN_MANIFEST=data/train_tarred_1bk/tarred_audio_manifest.json
@@ -51,6 +51,7 @@ model.train_ds.manifest_filepath=$TRAIN_MANIFEST \
 model.validation_ds.manifest_filepath=$VAL_MANIFEST \
 model.test_ds.manifest_filepath=$TEST_MANIFEST
 ```
+The scripts used for training the model are found under run scripts.
 
 ### Finetuning pretrained model
 To finetune the available model, you've to add the following code snipper to your configuration yaml file.

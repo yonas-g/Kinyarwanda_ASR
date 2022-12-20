@@ -1,4 +1,4 @@
-# Kinyarwanda STT GIZ
+# Kinyarwanda STT, Fairforward AI
 
 ## Monolingual Data Preparation
 
